@@ -40,4 +40,4 @@ TypeScript, React, Next.js, Node, NestJS, PostgreSQL, Prisma, Python, Docker.
 
 Six-month internship, starting March or April 2027. France, Switzerland, or remote.
 
-simonjspslack@gmail.com
+simonjspslack@gmail.com · [linkedin.com/in/simon-slack](https://www.linkedin.com/in/simon-slack/)
