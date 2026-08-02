@@ -16,15 +16,7 @@ Next.js, TypeScript, Prisma on PostgreSQL, Stripe Checkout with idempotent webho
 
 ## Open source
 
-Three pull requests, opened July 2026, currently under review.
-
-**[twentyhq/twenty#23629](https://github.com/twentyhq/twenty/pull/23629)** — editing a Select field on a sorted table view silently discarded the change. Cursor pagination emitted comparison operators the filter predicate did not handle, so it threw and aborted the caller's mutation. SELECT columns are PostgreSQL enums, ordered by option position, which that predicate never receives — so it now declines to answer instead of crashing.
-
-**[doctolib/safe-pg-migrations#178](https://github.com/doctolib/safe-pg-migrations/pull/178)** — `default: false` was read as "no default given", because Ruby treats `!false` the same as `!nil`. The gem fell back to a single unsafe statement, skipping the multi-step path it exists to provide. Regression test included; it fails on main and passes with the fix.
-
-**[SonarSource/sonarqube-mcp-server#510](https://github.com/SonarSource/sonarqube-mcp-server/pull/510)** — a hardcoded 30-second shutdown timeout cut off analyzer downloads on high-latency connections. Now configurable, default unchanged.
-
-All three started by reading the source. In two of them the diagnosis written in the issue turned out to be incomplete.
+**[doctolib/safe-pg-migrations#178](https://github.com/doctolib/safe-pg-migrations/pull/178)** — the gem exists to turn a dangerous `ALTER TABLE` into a safe multi-step migration. It skipped that path entirely for `default: false`, emitting a single `ADD COLUMN ... DEFAULT FALSE NOT NULL` on a live table. The guard tested `!default`, and Ruby treats `!false` exactly like `!nil`, so a legitimate boolean default was read as "no default given". One line, plus a regression test that fails without the fix and passes with it. Under review, July 2026.
 
 ## Elsewhere
 
