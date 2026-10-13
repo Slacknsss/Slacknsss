@@ -1,28 +1,28 @@
 # Simon Slack
 
-Second-year software engineering student at Epitech Paris, graduating 2028.
-QA Analyst at Anybuddy, a court-booking platform with around 500,000 users.
-
-My job is finding what breaks before users do. My own projects are the ones I have to keep running afterwards.
+Second-year student at Epitech Paris, graduating 2028.
+QA Analyst at Anybuddy, a padel and tennis court booking app with around 500,000 users.
 
 ## Running in production
 
-**[3venmade.com](https://3venmade.com)** — clothing brand storefront. Built and operated alone.
-Next.js, TypeScript, Prisma on PostgreSQL, Stripe Checkout with idempotent webhooks, admin back-office, row-level security. It takes real orders and real money.
+**[3venmade.com](https://3venmade.com)**: store for a clothing brand. I built it and I run it alone.
+Next.js, TypeScript, Prisma on PostgreSQL, Stripe Checkout with idempotent webhooks, admin back-office, row-level security. It takes real orders.
 
-**[vibaura.app](https://vibaura.app)** — Elo rating engine for padel. Algorithm and data model written from scratch, not pulled from a library.
+**[vibaura.app](https://vibaura.app)**: padel app with an Elo rating, a startup I'm co-founding with friends.
 
-**[slacklaboratory.com](https://slacklaboratory.com)** — portfolio.
+**[slacklaboratory.com](https://slacklaboratory.com)**: my portfolio.
 
-## Open source
+## School projects on this profile
 
-**[doctolib/safe-pg-migrations#178](https://github.com/doctolib/safe-pg-migrations/pull/178)** — the gem exists to turn a dangerous `ALTER TABLE` into a safe multi-step migration. It skipped that path entirely for `default: false`, emitting a single `ADD COLUMN ... DEFAULT FALSE NOT NULL` on a live table. The guard tested `!default`, and Ruby treats `!false` exactly like `!nil`, so a legitimate boolean default was read as "no default given". One line, plus a regression test that fails without the fix and passes with it. Under review, July 2026.
+**[NextBuy](https://github.com/Slacknsss/NextBuy-Machine-Learning)**: data science project in a team of three, on Instacart grocery data. My first model scored 99% accuracy, which was a data leak: the labels came from the same keywords the model was reading. I relabeled the products with Open Food Facts nutrition data and got 0.69 on 99 test products, the majority class being 52% of the data.
 
-## Elsewhere
+**[Tardis](https://github.com/Slacknsss/Tardis-Machine-Learning)**: SNCF train delays, team of three. I did the data cleaning and the EDA notebook.
 
-Third place nationally, Hack'Juice cybersecurity hackathon.
+**[Hack & Juice](https://github.com/Slacknsss/Hack-Juice-Cybersecurity-Hackathon-3rd-place-France-)**: write-ups of the OWASP Juice Shop challenges solved with Jules Fischer during an Epitech security hackathon.
 
-Currently building a civic platform with four other developers: NestJS, Next.js, PostgreSQL with Prisma, Docker, Traefik across five VPS, GitLab CI. My share includes porting Supabase `SECURITY DEFINER` RPCs to NestJS services and enforcing append-only audit tables with database triggers, because a convention is only as reliable as the most tired person on a Friday.
+## Team work
+
+I'm also building a civic platform with four other developers: NestJS, Next.js, PostgreSQL with Prisma, Docker, Traefik across five VPS, GitLab CI. The code is private. My part includes porting Supabase `SECURITY DEFINER` functions to NestJS services and adding database triggers so the audit tables stay append-only.
 
 ## Stack
 
